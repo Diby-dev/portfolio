@@ -1,0 +1,223 @@
+/* CONFIGURATION GENERALE */
+body {
+    background: #b9b9b9;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.espace-separation-section {
+    height: 100px;
+}
+
+
+/* BARRE DE NAVIGATION */
+.barre-navigation {
+    background-color: #00000033;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 4px 20px rgb(0, 0, 0);
+    border: none;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1030;
+}
+
+.logo-navigation {
+    color: #000000;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.section-apropos{
+    background-color: #ebeaea;
+}
+.titre-apropos{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.titre-formation{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.titre-ita{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.section-formation{
+    background-color: #e4e4e4;
+}
+
+.lieu-ita{
+    height: 400px;
+    width: 600px; 
+    border-radius: 8%;
+}
+.lieu-ita:hover {
+    transform: scale(1.02);
+    transition: all 0.6s ease;
+}
+
+.lien-navigation {
+    color: #000000;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.lien-navigation:hover {
+    color: #4c558a;
+}
+
+.card{
+    background-color: #14141a;
+    color: #ebebeb;
+    border-radius: 15px;
+    box-shadow: 12px 10px 10px rgba(0, 0, 0, 0.64);
+}
+.titre-l3{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.bouton-burger {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* SECTION HERO (SPLIT 50/50) */
+.section-principale {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.bloc-contenu-texte {
+    animation: apparitionFluide 1s ease-out;
+}
+
+.titre-principal {
+    font-size: calc(3rem + 3vw);
+    line-height: 0.9;
+    letter-spacing: -2px;
+}
+
+.sous-titre-principal {
+    letter-spacing: 2px;
+}
+
+.metier-principal {
+    letter-spacing: 1px;
+}
+
+.ligne-separation {
+    width: 60px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.texte-description {
+    max-width: 450px;
+    line-height: 1.6;
+}
+
+
+/* BLOC IMAGE (DROITE) */
+.bloc-image-conteneur {
+    overflow: hidden;
+}
+
+.image-moitie-droite {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%) contrast(110%);
+    transition: transform 0.5s ease;
+}
+
+.bloc-image-conteneur:hover .image-moitie-droite {
+    transform: scale(1.02);
+}
+
+
+/* BOUTONS MINIMALISTES */
+.bouton-sombre {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.bouton-sombre:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.bouton-bordure {
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.bouton-bordure:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+/* DESIGN RESPONSIVE POUR LES MOBILES */
+@media (max-width: 767px) {
+    .section-principale {
+        height: auto;
+    }
+    
+    .titre-principal {
+        font-size: 3.5rem;
+        margin-top: 80px;
+    }
+    
+    .bloc-image-conteneur {
+        display: block;
+        width: 100%;
+        height: 450px; /* Assure au carrousel sa boîte globale sur mobile */
+    }
+
+    .image-moitie-droite {
+        height: 450px;
+    }
+    
+    .barre-navigation {
+        min-height: 60px;
+        backdrop-filter: blur(25px);
+        box-shadow: 0 4px 20px rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.178);
+    }
+}
+
+
+/* ANIMATION */
+@keyframes apparitionFluide {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
