@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan Diby | Développeur Full Stack</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,30 +43,50 @@
         </div>
     </nav>
 
-    <header id="profil" class="section-principale container-fluid p-0">
+    <header class="section-principale container-fluid mt-0 mt-md-5 p-0">
         <div class="row g-0 h-100">
             
-            <div class="col-md-6 bg-white d-flex flex-column justify-content-center px-4 px-md-5 pb-5 text-dark h-100">
+            <div class="col-md-6 part-gauche d-flex flex-column justify-content-center px-4 px-md-5 pb-5 text-dark h-100">
                 <div class="mx-md-4 bloc-contenu-texte">
                     
-                    <h1 class="titre-principal display-1 fw-bold text-uppercase mb-1 text-black">
+                    <h1 class="titre-principal display-1 fw-bold text-uppercase mt-5 mb-1 text-black">
                         Dan Diby
                     </h1>
+                    <h2 class="metier-principal h4 fw-normal mb-4">Développeur Full Stack</h2>
                     
-                    <div class="ligne-separation my-4"></div>
-                    
-                    <h2 class="metier-principal h4 fw-normal text-secondary mb-4">Développeur Full Stack</h2>
-                    
-                    <p class="texte-description lead text-muted mb-5 fs-6">
+                    <p id="texte-rotation" class="texte-description mb-5">
                         Conception d'applications robustes, architecture de bases de données et intégration sécurisée. Une approche technique et minimaliste du code.
-                    </p>
+                        </p>
                     
                     <div class="d-flex gap-3">
-                        <a href="#projet" class="bouton-sombre px-4 py-2">Projets</a>
-                        <a href="#experience" class="bouton-bordure px-4 py-2">Parcours</a>
+                        <a href="https://www.linkedin.com/in/diby-jean-yves-dan-202410335">
+                            <img src="assets/images/sociale/linkedin.png" alt="linkedin" class="sociale-lien rounded-5">
+                        </a>
+                        <a href="https://wa.me/2250575074820?text=Bonjour%20Monsieur%2C%20j%27ai%20consult%C3%A9%20votre%20portfolio%20et%20votre%20profil%20a%20retenu%20mon%20attention.%20Je%20souhaiterais%20%C3%A9changer%20avec%20vous.">
+                            <img src="assets/images/sociale/whatsapp.png" alt="whatsapp" class="sociale-lien">
+                        </a>
+                        <a href="https://github.com/Diby-dev">
+                            <img src="assets/images/sociale/github.png" alt="github" class="sociale-lien rounded-5">
+                        </a>
+                        
+                    </div>
+                    <div class="mt-5 justify-content-between d-flex">
+                        <span class="lien-header fw-bold">
+                            <i class="bi bi-geo-alt-fill"></i> Abidjan
+                        </span>
+
+                        <span class="lien-header fw-bold">
+                            <i class="bi bi-telephone-fill"></i> 0575074820
+                        </span>
+
+                        <span class="lien-header fw-bold">
+                            <i class="bi bi-envelope-fill"></i> dibyjeanyves02@gmail.com
+                        </span>
                     </div>
                 </div>
             </div>
+
+            
 
             <div class="col-md-6 h-100 bloc-image-conteneur">
                 <div id="defilement-images" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="4000">                    
@@ -72,11 +96,23 @@
                         </div>
                         
                         <div class="carousel-item h-100">
-                            <div class="image-moitie-droite" style="background-image: url('assets/images/moi/moi2.png');"></div>
+                            <div class="image-moitie-droite" style="background-image: url('assets/images/moi/informaticien1.webp');"></div>
                         </div>
                         
                         <div class="carousel-item h-100">
-                            <div class="image-moitie-droite" style="background-image: url('assets/images/moi/moi3.png');"></div>
+                            <div class="image-moitie-droite" style="background-image: url('assets/images/moi/informaticien2.webp');"></div>
+                        </div>
+
+                        <div class="carousel-item h-100">
+                            <div class="image-moitie-droite" style="background-image: url('assets/images/moi/informaticien3.webp');"></div>
+                        </div>
+
+                        <div class="carousel-item h-100">
+                            <div class="image-moitie-droite" style="background-image: url('assets/images/moi/informaticien4.webp');"></div>
+                        </div>
+
+                        <div class="carousel-item h-100">
+                            <div class="image-moitie-droite" style="background-image: url('assets/images/moi/informaticien5.webp');"></div>
                         </div>
 
                     </div>
@@ -85,33 +121,52 @@
 
         </div>
     </header>
+    <div class="po-profil" id="profil"></div>
+
 
     <div class="container-fluid px-5 section-apropos">
-        <div class="row ">
+        <div class="espace-G"></div>
+        <div class="row">
             <div class="col-12 text-center">
-                <h2 class="titre-apropos my-5">Mon profil</h2>
+                <h2 class="titre-apropos apparition" id="profil">Profil</h2>
+                <p class="mb-5 text-profil fw-bold apparition">Qui je suis réellement</p>
             </div>
-            <div class="col-12 col-md-8  text-md-start mx-auto">
-                <p class="lead">
+            <div class="col-12 col-md-8 text-md-start mx-auto apparition">
+                <p class="text-profil">
                     Je suis Dan Diby, un développeur Full Stack passionné par la création 
                     d'applications web innovantes et performantes. 
                     Avec une expertise en JavaScript, Python et les technologies modernes, 
                     je transforme les idées en réalité digitale.
                 </p>
-                <p>Dans mon travail je m'investis toujours à 100%</p>
+                <p class="text-profil text-center">Dans mon travail je m'investis toujours à 100%</p>
             </div>
         </div>
-        <div class="espace-separation-section"></div>
+        <div class="espace-G"></div>
+    </div>
+
+    <div class="container-fluid px-5 section-disponible">
+        <div class="espace-dispo"></div>
+        <div class="row">
+            <div class="col-12 text-center">
+            </div>
+            <div class="col-12 col-md-8 text-md-start mx-auto">
+                <p class="text-disponible text-center fw-bold">
+                    Je suis Dan Diby, un développeur Full Stack passionné par la création 
+                </p>
+            </div>
+        </div>
+        <div class="espace-dispo"></div>
     </div>
 
 
     <div class="container-fluid px-5 section-formation">
         <div class="row ">
             <div class="col-12 text-center">
-                <h2 class="titre-formation mt-5 mb-5">Ma formation</h2>
+                <h2 class="titre-formation mt-5">Formation</h2>
+                <p class="mb-5">Une formation concentrée uniquement dans le domaine de l'informatique</p>
             </div>
-            <div class="col-12 col-md-6">
-                <a href=""><img src="assets/images/lieu/ita.png" alt="" class="img-fluid rounded-3 lieu-ita mb-4"></a>
+            <div class="col-12 col-md-5">
+                <a href="https://ita-education.ci/"><img src="assets/images/lieu/ita.png" alt="" class="img-fluid rounded-3 lieu-ita mb-4"></a>
             </div>
             <div class="col-12 col-md-6">
                 <h3 class="titre-ita">L'Institut des Technologies d'Abidjan</h3>
@@ -119,32 +174,364 @@
                     Je suis Dan Diby, un développeur Full Stack passionné par la création 
                     d'applications web innovantes et performantes. 
                     Avec une expertise en JavaScript, Python et les technologies modernes, 
+                    je transforme les idées en réalité digitale.Je suis Dan Diby, un développeur 
+                    Full Stack passionné par la création 
+                    d'applications web innovantes et performantes. 
+                    Avec une expertise en JavaScript, Python et les technologies modernes, 
+                    je transforme les idées en réalité digitale.
+                    Je suis Dan Diby, un développeur Full Stack passionné par la création 
+                    d'applications web innovantes et performantes. 
+                    Avec une expertise en JavaScript, Python et les technologies modernes, 
                     je transforme les idées en réalité digitale.
                 </p>
             </div>
 
+            <div class="espace-M"></div>
+
+            
+            <div class="container">
+    <div class="row justify-content-center">
+        <p class="mb-5 text-center">Mon parcours académique</p>
+        <div class="col-12 col-md-10 col-lg-8"> <div class="card card-f p-4 mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-baseline">
+                    <div>
+                        <p class="titre-l3 text-uppercase tracking-wide mb-1">Licence 3 - Sciences Informatiques</p>
+                        <p class=" m-0">Institut des Technologies d'Abidjan</p>
+                    </div>
+                    <span class="badge-annee mt-2 mt-md-0">2024-2025</span>
+                </div>
+            </div>
+
+            <div class="card card-f p-4 mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-baseline">
+                    <div>
+                        <p class="titre-l3 text-uppercase tracking-wide mb-1">BTS - Informatique Développeur d'applications</p>
+                        <p class=" m-0">Institut des Technologies d'Abidjan</p>
+                    </div>
+                    <span class="badge-annee mt-2 mt-md-0">2023-2024</span>
+                </div>
+            </div>
+
+            <div class="card card-f p-4 mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-baseline">
+                    <div>
+                        <p class="titre-l3 text-uppercase tracking-wide mb-1">Licence 2 - Sciences Informatiques</p>
+                        <p class=" m-0">Institut des Technologies d'Abidjan</p>
+                    </div>
+                    <span class="badge-annee mt-2 mt-md-0">2023-2024</span>
+                </div>
+            </div>
+
+            <div class="card card-f p-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-baseline">
+                    <div>
+                        <p class="titre-l3 text-uppercase tracking-wide mb-1">Licence 1 - Sciences Informatiques</p>
+                        <p class=" m-0">Institut des Technologies d'Abidjan</p>
+                    </div>
+                    <span class="badge-annee mt-2 mt-md-0">2022-2023</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+                
+                
+
+        <div class="mt-5 mb-5 col-12 text-center">
+                Nombre de diplômes obtenu dans le domaine de l'informatique
+            </div>
+
+            <div class="mt-5 col-12 text-center">
+                Pour conclus ma formation en licence me permet d'avoir des compétence plus approfondie dans le domaine de l'informatique, ainsi j'ai des connaîssances en OS, en robotique, en réseau et en sécurité informatique.
+                Ma formation en BTS m'a permis d'avoir des compétences plus techniques et pratiques dans le domaine du développement informatique, ainsi j'ai des connaissances en développement web, en développement mobile, en développement de jeux vidéo et en développement de logiciels.
+            </div>
+
             <div class="espace-separation-section"></div>
 
-            <div class="col-12 col-md-6">
-                <div class="card px-4 py-3">
-                    <p class="titre-l3">Licence 3 - Sciences Informatiques</p>
-                    <p>Institut des Technologies d'Abidjan</p>
-                    <p>2024-2025</p>
+        
+        </div>
+    </div>
+
+
+    
+
+    <div class="container-fluid px-5 section-experience">
+          <div class="row ">
+            <div class="col-12 text-center">
+                <h2 class="titre-apropos mt-5">Expérience</h2>
+                <p class="mb-5">Une expérience solide prouvant mes compétences sur le terrain</p>
+              </div>
+                <div class="col-12 col-md-5 text-md-end">
+                <a href="https://ya-consulting.com/"><img src="assets/images/lieu/ya-consulting.png" alt="" class="img-fluid rounded-3 lieu-ya-consulting"></a>
+            </div>
+            <div class="col-12 col-md-7 ">
+                <h3 class="titre-ita">YA Consulting</h3>
+                <p class="lead">
+                    Je suis Dan Diby, un développeur Full Stack passionné par la création 
+                    d'applications web innovantes et performantes. 
+                    Avec une expertise en JavaScript, Python et les technologies modernes, 
+                    je transforme les idées en réalité digitale.Je suis Dan Diby, un développeur 
+                    Full Stack passionné par la création 
+                    d'applications web innovantes et performantes. 
+                    Avec une expertise en JavaScript, Python et les technologies modernes, 
+                    je transforme les idées en réalité digitale.
+                </p>
+            </div>
+
+            <div class="col-12 mt-5 text-center">
+                <h4>Poste occupé à YA Consulting: </h4>
+                <P>Stagiaire développeur Full Stack</P>
+            </div>
+
+            <div class="col-12 mt-5 text-center">
+                <h4>Durée du stage à YA Consulting: </h4>
+                <P>6 mois (septembre 2025 - février 2026)</P>
+            </div>
+
+            <div class="col-12 mt-5 text-center">
+                <h4>Projets réalisés et tâches accomplies: </h4>
+            </div>
+           
+            <div class="col-12 col-md-6 mt-5">
+                <div class="card card-e">
+                    <div class="card-body p-4">
+                        <h5 class="card-title">Création d'une application de gestion de tâches</h5>
+                        <p class="card-text">Développement d'une application web de gestion de tâches pour l'entreprise YA Consulting</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6">
-                <div class="card px-4 py-3">
-                    <p class="titre-l3">BTS - Développeur d'Applications</p>
-                    <p>Institut des Technologies d'Abidjan</p>
-                    <p>2023-2024</p>
+            <div class="col-12 col-md-6 mt-5">
+                <div class="card card-e">
+                    <div class="card-body p-4">
+                        <h5 class="card-title">Création d'une application de gestion de carte d'identité scolaire</h5>
+                        <p class="card-text">Développement d'une application web de gestion de tâches pour</p>
+                </div>
                 </div>
             </div>
+
+            <div class="col-12 col-md-6 mt-5">
+                <div class="card card-e">
+                    <div class="card-body p-4">
+                        <h5 class="card-title">Maintenance de la page web de l'entreprise YA Consulting</h5>
+                        <p class="card-text">Développement d'une application web de gestion de tâches pour</p>
+                </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 mt-5 text-center">
+                <h4>Technologies les plus utilisées: </h4>
+                <P>JavaScript, Python, React, Node.js</P>
+            </div>
+
+            
+            
+            
+
             <div class="espace-separation-section"></div>
 
         </div>
     </div>
 
+
+    <div class="container-fluid px-5 section-apropos">
+        <div class="espace-G"></div>
+        <div class="row ">
+            <div class="col-12 text-center">
+                <h2 class="titre-apropos">Compétences</h2>
+                <p class="mb-5">Les technologies que j'utilise pour la mise en place de solutions numériques.</p>
+            </div>
+
+            <div class="col-12 col-md-6 mt-5">
+                <div class="card card-c">
+                    <div class="card-body p-4">
+                        <h5 class="card-title text-center">Frontend</h5>
+                        <ul>
+                            <li>Bootstrap</li>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mt-5">
+                <div class="card card-c">
+                    <div class="card-body p-4">
+                        <h5 class="card-title text-center">Frontend</h5>
+                        <ul>
+                            <li>Bootstrap</li>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mt-5">
+                <div class="card card-c">
+                    <div class="card-body p-4">
+                        <h5 class="card-title text-center">Frontend</h5>
+                        <ul>
+                            <li>Bootstrap</li>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mt-5">
+                <div class="card card-c">
+                    <div class="card-body p-4">
+                        <h5 class="card-title text-center">Frontend</h5>
+                        <ul>
+                            <li>Bootstrap</li>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="espace-G"></div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid px-5 section-projets">
+        <div class="espace-G"></div>
+        <div class="row ">
+            <div class="col-12 text-center">
+                <h2 class="titre-apropos">Projets</h2>
+                <p class="mb-5">Mes réalisations personnelles et académiques</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card card-c">
+                    <div class="card-body p-4">
+                        <h5 class="card-title text-center">Frontend</h5>
+                        <ul>
+                            <li>Bootstrap</li>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card card-c">
+                    <div class="card-body p-4">
+                        <h5 class="card-title text-center">Frontend</h5>
+                        <ul>
+                            <li>Bootstrap</li>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="espace-G"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-5 section-apropos">
+        <div class="espace-G"></div>
+        <div class="row ">
+            <div class="col-12 text-center">
+                <h2 class="titre-apropos">Contact</h2>
+                <p class="mb-5">Travaillons ensemble</p>
+            </div>
+            <div class="col-12 col-md-6 mx-auto">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" placeholder="Votre nom">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Votre email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Votre message"></textarea>
+                    </div>
+                    <button type="submit" class="bouton-sombre px-4 py-2">Envoyer</button>
+                </form>
+            </div>
+            <div class="espace-G"></div>
+
+        </div>
+    </div>
+
+    
+
+
+
+    <footer class="foot py-5 text-white">
+        <div class="container">
+
+            <div class="row justify-content-between">
+                <div class="col-12 col-md-auto mb-5">
+                    <img src="" class="img-foot-1">
+                </div>
+
+                <div class="col-6 col-md-auto">
+                    <h5>LOCALITES</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Abobo</a></li>
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Yamoussokro</a></li>
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Yopougon</a></li>
+                        <li><a href="" class="link-foot text-secondary small">Sassandra</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-auto">
+                    <h5>CONTACT</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="" class="link-foot text-secondary">Anoh +23</a></li>
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Alimo ino +456</a></li>
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Dino ipo +760</a></li>
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Adjoumanie +123</a></li>
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Zeltrip +678</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-auto">
+                    <h5>ARTISTE</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Booba</a></li>
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Alie Banga</a></li>
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Ashe 22</a></li>
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Lil pumpe</a></li>
+                        <li class="mb-2"><a href="" class="link-foot text-secondary small">Minsite</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="my-3 border-secondary opacity-30">
+
+            <div class="row">
+                <div class="col-12 col-md-6 gap-3 d-flex justify-content-md-start justify-content-center mb-3">
+                    <a href=""><img src="" class="social-link"></a>
+                    <a href=""><img src="" class="social-link"></a>
+                    <a href=""><img src="" class="social-link"></a>
+                </div>
+
+                <div class="col-12 col-md-6 text-center text-md-end text-secondary">
+                    2026 © All rights reserved.
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>

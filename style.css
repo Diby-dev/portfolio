@@ -3,7 +3,7 @@ body {
     background: #b9b9b9;
     margin: 0;
     padding: 0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Inter', sans-serif, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     overflow-x: hidden;
 }
 
@@ -14,8 +14,8 @@ body {
 
 /* BARRE DE NAVIGATION */
 .barre-navigation {
-    background-color: #00000033;
-    backdrop-filter: blur(25px);
+    background-color: #041a6162;
+    backdrop-filter: blur(50px);
     box-shadow: 0 4px 20px rgb(0, 0, 0);
     border: none;
     min-height: 20px;
@@ -25,18 +25,76 @@ body {
     z-index: 1030;
 }
 
-.logo-navigation {
-    color: #000000;
-    font-weight: 800;
-    font-size: 1.1rem;
+.sociale-lien{
+    height: 45px;
+    transition: all 0.4s ease;
+}
+.sociale-lien:hover{
+    transform: scale(1.5);
+    transition: all 0.4s ease;
 }
 
-.section-apropos{
-    background-color: #ebeaea;
+.lien-header{
+    font-size: 1rem;
+    font-weight: 530;
 }
+
+.part-gauche{
+    background: linear-gradient(rgba(255, 255, 255, 0.486), rgba(255, 255, 255, 0.877)), url("assets/images/styles/p4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: relative;
+    min-height: 450px;            
+}
+.po-profil{
+    background-color: #ffffff;
+}
+
+
+.section-apropos{
+    background: linear-gradient(rgba(255, 255, 255, 0.733), rgba(206, 215, 255, 0)), url("assets/images/styles/p1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: relative;
+    min-height: 450px; 
+}
+.apparition{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+.apparition.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+.section-disponible{
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(206, 215, 255, 0)), url("assets/images/styles/serveur.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: relative;
+    min-height: 100px; 
+}
+.text-disponible{
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+
+.section-experience{
+    background-color: #ffffff;
+}
+.section-projets{
+    background-color: #7e8dbe;
+}
+
 .titre-apropos{
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 560;
+    color: #1c238a;
 }
 .titre-formation{
     font-size: 2.5rem;
@@ -52,12 +110,34 @@ body {
 }
 
 .lieu-ita{
-    height: 400px;
-    width: 600px; 
-    border-radius: 8%;
+    height: 420px;
+    width: 590px; 
+    border-radius: 20%;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .lieu-ita:hover {
     transform: scale(1.02);
+    transition: all 0.6s ease;
+}
+.lieu-ya-consulting{
+    height: 300px;
+    width: 550px; 
+    border-radius: 8%;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.lieu-ya-consulting:hover {
+    transform: scale(1.02);
+    transition: all 0.6s ease;
+}
+
+.logo-navigation {
+    color: #000000;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: all 0.4s;
+}
+.logo-navigation:hover{
+    color: #ffffff;
     transition: all 0.6s ease;
 }
 
@@ -65,22 +145,91 @@ body {
     color: #000000;
     font-weight: 600;
     font-size: 1rem;
-    transition: all 0.3s ease;
+    transition: all 0.6s;
 }
-
 .lien-navigation:hover {
-    color: #4c558a;
+    color: #ffffff;
+    transition: all 0.6s ease;
+    
 }
 
-.card{
-    background-color: #14141a;
-    color: #ebebeb;
-    border-radius: 15px;
-    box-shadow: 12px 10px 10px rgba(0, 0, 0, 0.64);
+.text-profil{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.20rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #000000;
 }
-.titre-l3{
-    font-size: 1.4rem;
+
+.espace-M{
+    height: 60px;
+}
+.espace-G{
+    height: 130px;
+}
+.espace-dispo{
+    height: 180px;
+}
+
+
+.card-f {
+    background-color: #000000; /* On enlève le fond lourd */
+    color: #ebebeb;
+    border-radius: 0; /* Des angles droits stricts font plus architectural et premium */
+    border: none;
+    border-left: 5px solid rgb(39, 97, 255); /* Ligne verticale discrète */
+    box-shadow: none; /* Pas d'ombre */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-f:hover {
+    border-left-color: #ff660d; /* La ligne s'allume au survol */
+    transform: translateX(25px); /* Léger décalage vers la droite ultra fluide */
+    background-color: rgb(1, 10, 51); /* Reflet très subtil */
+}
+
+.card-e{
+    background-color: #000000;
+    border-radius: 12px;
+    color: #ebebeb;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.card-e:hover{
+    border: 7px solid #259125;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-c{
+    background-color: #000000;
+    border-radius: 20px;
+    color: #ebebeb;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.card-c:hover{
+    border: 7px solid #2901b9;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.titre-l3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.badge-annee {
+    color: #0537be;
     font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Style optionnel pour rendre le texte étendu plus élégant */
+.texte-description-diplome {
+    font-size: 0.95rem;
+    color: #b0b0b5;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Ligne de séparation fine */
+    line-height: 1.5;
 }
 
 .bouton-burger {
@@ -100,8 +249,6 @@ body {
 
 .titre-principal {
     font-size: calc(3rem + 3vw);
-    line-height: 0.9;
-    letter-spacing: -2px;
 }
 
 .sous-titre-principal {
@@ -119,8 +266,17 @@ body {
 }
 
 .texte-description {
+    font-size: 1.2rem;
     max-width: 450px;
     line-height: 1.6;
+    transition: opacity 0.8s ease;
+}
+.fade-out{
+    opacity: 0;
+}
+
+.fade-in{
+    opacity: 1;
 }
 
 
@@ -135,7 +291,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: grayscale(100%) contrast(110%);
     transition: transform 0.5s ease;
 }
 
@@ -221,3 +376,30 @@ body {
         transform: translateY(0); 
     }
 }
+
+
+ .foot{
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(51, 3, 3)),
+                url('{{ asset("images/6.jpg") }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position: relative;
+        background-attachment: fixed;
+        min-height: 450px;
+    }
+    .img-foot-1{
+        height: 52px;
+    }
+    @media(max-width: 766px){
+        .img-foot-1{
+            height: 67px;
+        }
+    }
+    .link-foot{
+        text-decoration: none;
+        color: #fff;
+    }
+    .social-link{
+        height: 35px;
+    }
