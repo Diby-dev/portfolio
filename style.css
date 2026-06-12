@@ -1,4 +1,3 @@
-/* CONFIGURATION GENERALE */
 body {
     background: #b9b9b9;
     margin: 0;
@@ -12,7 +11,6 @@ body {
 }
 
 
-/* BARRE DE NAVIGATION */
 .barre-navigation {
     background-color: #041a6162;
     backdrop-filter: blur(50px);
@@ -78,9 +76,36 @@ body {
     background-position: relative;
     min-height: 100px; 
 }
+.section-disponible2{
+    background: linear-gradient(rgba(60, 66, 94, 0), rgba(206, 215, 255, 0)), url("assets/images/styles/dispo2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: relative;
+    min-height: 100px; 
+}
+.section-disponible3{
+    background: linear-gradient(rgba(60, 66, 94, 0.219), rgba(20, 34, 97, 0.137)), url("assets/images/styles/free.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: relative;
+    min-height: 100px; 
+}
+
 .text-disponible{
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+}
+
+.pourcentage{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #00c853;
+    display: inline-block;
+    text-shadow: 0 0 15px rgba(0,200,83,0.5);
 }
 
 
@@ -100,20 +125,52 @@ body {
     font-size: 2.5rem;
     font-weight: 600;
 }
+.titre-second{
+    font-size: 2rem;
+    font-weight: 560;
+    color: #1d92ff;
+}
 .titre-ita{
     font-size: 2rem;
     font-weight: 600;
 }
 
+/* État initial caché */
+.reveal {
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Décalage initial */
+.fade-left {
+    transform: translateX(-50px); /* Pousse vers la gauche */
+}
+
+.fade-right {
+    transform: translateX(50px); /* Pousse vers la droite */
+}
+
+/* État final quand l'élément est visible à l'écran */
+.reveal.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .section-formation{
-    background-color: #e4e4e4;
+    background: linear-gradient(rgba(255, 255, 255, 0.63), rgba(255, 255, 255, 0.568)), url("assets/images/styles/18.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: relative;
+    min-height: 450px; 
 }
 
 .lieu-ita{
-    height: 420px;
+    height: 380px;
     width: 590px; 
     border-radius: 20%;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    object-fit: cover;
 }
 .lieu-ita:hover {
     transform: scale(1.02);
@@ -160,6 +217,49 @@ body {
     font-weight: 400;
     color: #000000;
 }
+.text-card{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.10rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #a6d0f3;
+}
+.text-card-c{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.10rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #7dffaf;
+}
+
+.text-disponible {
+    transition: opacity 0.8s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+/* points */
+.point {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    display: inline-block;
+    margin: 0 4px;
+    transition: 0.3s;
+}
+
+.point.active {
+    background: #fff;
+    transform: scale(1.3);
+}
+
 
 .espace-M{
     height: 60px;
@@ -179,7 +279,7 @@ body {
     border: none;
     border-left: 5px solid rgb(39, 97, 255); /* Ligne verticale discrète */
     box-shadow: none; /* Pas d'ombre */
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all 2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .card-f:hover {
@@ -190,23 +290,45 @@ body {
 
 .card-e{
     background-color: #000000;
-    border-radius: 12px;
+    border-radius: 20px;
+    width: 750px;
+    border-top: 5px solid #1452ff;
     color: #ebebeb;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .card-e:hover{
-    border: 7px solid #259125;
+    transform: scale(1.05);
+    border-top: 8px solid #ceb7f8;
+    background-color: #01020c;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
+/* Style personnalisé pour les badges de compétences */
+.badge-tech {
+    background-color: rgb(13, 7, 95) !important; /* Fond turquoise très transparent */
+    color: #ffffff !important; /* Texte turquoise */
+    border: 1px solid rgba(0, 180, 160, 0.2); /* Fine bordure */
+    padding: 0.5em 0.9em;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+}
 
+/* Optionnel : un petit effet au survol si tu veux */
+.badge-tech:hover {
+    background-color: rgb(37, 156, 7) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
 .card-c{
-    background-color: #000000;
+    background-color: #020202fa;
     border-radius: 20px;
     color: #ebebeb;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .card-c:hover{
-    border: 7px solid #2901b9;
+    transform: scale(1.05);
+    border-right: 5px solid #2aa30c;
+    background-color: #020313;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -334,6 +456,18 @@ body {
     color: #ffffff;
 }
 
+#annees-counter{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1327db;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+.diplômes{
+    color: #1327db;
+    font-size: 1.3rem;
+}
+
 
 /* DESIGN RESPONSIVE POUR LES MOBILES */
 @media (max-width: 767px) {
@@ -379,8 +513,7 @@ body {
 
 
  .foot{
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(51, 3, 3)),
-                url('{{ asset("images/6.jpg") }}');
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(51, 3, 3));
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -403,3 +536,49 @@ body {
     .social-link{
         height: 35px;
     }
+    .sociale-card{
+        height: 30px;
+    }
+    .techno{
+        height: 45px;
+    }
+    .logo-projets{
+        height: 145px;
+    }
+    .img-projet{
+        height: 145px;
+    }
+    .badge-info{
+        background-color: rgb(19, 22, 32) !important; /* Fond turquoise très transparent */
+        color: #ffffff !important; /* Texte turquoise */
+        border: 1px solid rgba(0, 180, 160, 0.2); /* Fine bordure */
+        padding: 0.5em 0.9em;
+        font-weight: 500;
+        font-size: 0.85rem;
+        letter-spacing: 0.3px;
+    }
+    .badge-info:hover {
+    background-color: rgb(39, 39, 63) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.techno-web{
+    height: 35px;
+}
+
+.section-experience{
+    background: linear-gradient(rgba(255, 255, 255, 0.589), rgb(255, 255, 255)), url("assets/images/styles/5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: relative;
+    min-height: 450px; 
+}
+.text-exp{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.20rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #ffffff;
+}
