@@ -58,6 +58,14 @@ body {
     background-position: relative;
     min-height: 450px; 
 }
+.section-projets{
+    background: linear-gradient(rgb(255, 255, 255), rgba(206, 215, 255, 0)), url("assets/images/styles/8.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: relative;
+    min-height: 450px; 
+}
 .apparition{
     opacity: 0;
     transform: translateY(50px);
