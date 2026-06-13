@@ -38,7 +38,7 @@ body {
 }
 
 .part-gauche{
-    background: linear-gradient(rgba(255, 255, 255, 0.486), rgba(255, 255, 255, 0.877)), url("assets/images/styles/p4.jpg");
+    background: linear-gradient(rgba(255, 255, 255, 0.486), rgba(255, 255, 255, 0.877)), url("assets/images/styles/p4.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,7 +51,7 @@ body {
 
 
 .section-apropos{
-    background: linear-gradient(rgba(255, 255, 255, 0.733), rgba(206, 215, 255, 0)), url("assets/images/styles/p1.jpg");
+    background: linear-gradient(rgba(255, 255, 255, 0.733), rgba(206, 215, 255, 0)), url("assets/images/styles/p1.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,7 +59,7 @@ body {
     min-height: 450px; 
 }
 .section-projets{
-    background: linear-gradient(rgb(255, 255, 255), rgba(206, 215, 255, 0)), url("assets/images/styles/8.jpg");
+    background: linear-gradient(rgb(255, 255, 255), rgba(206, 215, 255, 0)), url("assets/images/styles/8.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@ body {
     transform: translateY(0);
 }
 .section-disponible{
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(206, 215, 255, 0)), url("assets/images/styles/serveur.jpg");
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(206, 215, 255, 0)), url("assets/images/styles/serveur.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -85,7 +85,7 @@ body {
     min-height: 100px; 
 }
 .section-disponible2{
-    background: linear-gradient(rgba(60, 66, 94, 0), rgba(206, 215, 255, 0)), url("assets/images/styles/dispo2.jpg");
+    background: linear-gradient(rgba(60, 66, 94, 0), rgba(206, 215, 255, 0)), url("assets/images/styles/dispo2.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -94,7 +94,7 @@ body {
     min-height: 100px; 
 }
 .section-disponible3{
-    background: linear-gradient(rgba(60, 66, 94, 0.219), rgba(20, 34, 97, 0.137)), url("assets/images/styles/free.jpg");
+    background: linear-gradient(rgba(60, 66, 94, 0.219), rgba(20, 34, 97, 0.137)), url("assets/images/styles/free.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -165,7 +165,7 @@ body {
 }
 
 .section-formation{
-    background: linear-gradient(rgba(255, 255, 255, 0.63), rgba(255, 255, 255, 0.568)), url("assets/images/styles/18.jpg");
+    background: linear-gradient(rgba(255, 255, 255, 0.63), rgba(255, 255, 255, 0.568)), url("assets/images/styles/18.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -521,7 +521,7 @@ body {
 
 
  .foot{
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(51, 3, 3));
+        background-color: #000000;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -576,7 +576,7 @@ body {
 }
 
 .section-experience{
-    background: linear-gradient(rgba(255, 255, 255, 0.589), rgb(255, 255, 255)), url("assets/images/styles/5.jpg");
+    background: linear-gradient(rgba(255, 255, 255, 0.589), rgb(255, 255, 255)), url("assets/images/styles/5.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

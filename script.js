@@ -266,3 +266,46 @@ document.addEventListener("DOMContentLoaded", () => {
     anneesObserver.observe(anneesCounter);
 
 });
+
+
+
+
+
+const form = document.getElementById('portfolioForm');
+const responseMessage = document.getElementById('formResponse');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+    
+    // Changement de style temporaire pendant l'envoi (Classe Bootstrap 'text-info')
+    responseMessage.textContent = "Envoi en cours...";
+    responseMessage.className = "mt-3 text-info fw-bold";
+
+    const formData = new FormData(form);
+
+    // Envoi des données vers l'API Web3Forms
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(async (response) => {
+        let json = await response.json();
+        
+        if (response.status == 200) {
+            // Succès : Changement en vert (Classe Bootstrap 'text-success')
+            responseMessage.textContent = "Message envoyé avec succès ! Je vous répondrai très rapidement.";
+            responseMessage.className = "mt-3 text-success fw-bold";
+            form.reset(); // Vide automatiquement les champs du formulaire
+        } else {
+            // Erreur serveur : Affichage en rouge
+            responseMessage.textContent = "Erreur : " + json.message;
+            responseMessage.className = "mt-3 text-danger fw-bold";
+        }
+    })
+    .catch(error => {
+        // Erreur réseau (ex: pas d'internet)
+        console.log(error);
+        responseMessage.textContent = "Une erreur est survenue. Vérifiez votre connexion.";
+        responseMessage.className = "mt-3 text-danger fw-bold";
+    });
+});
