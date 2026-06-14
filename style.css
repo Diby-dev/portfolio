@@ -225,6 +225,12 @@ body {
     font-weight: 400;
     color: #000000;
 }
+@media screen and (max-width: 768px) {
+    .text-profil {
+        font-size: 1rem; /* Taille réduite pour les écrans mobiles */
+        line-height: 1.7;   /* Optionnel : on ajuste aussi l'interligne pour que ce soit plus joli */
+    }
+}
 .text-card{
     font-family: 'Inter', sans-serif;
     font-size: 1.10rem;
@@ -335,8 +341,7 @@ body {
 }
 .card-c:hover{
     transform: scale(1.05);
-    border-right: 5px solid #2aa30c;
-    background-color: #020313;
+    background-color: #03041a;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
