@@ -58,6 +58,14 @@ body {
     background-position: relative;
     min-height: 450px; 
 }
+.section-cv{
+    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.568)), url("assets/images/styles/55.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: relative;
+    min-height: 450px; 
+}
 .section-projets{
     background: linear-gradient(rgb(255, 255, 255), rgba(206, 215, 255, 0)), url("assets/images/styles/8.webp");
     background-size: cover;
@@ -71,6 +79,7 @@ body {
     transform: translateY(50px);
     transition: all 1s ease;
 }
+
 .apparition.visible{
     opacity: 1;
     transform: translateY(0);
@@ -106,6 +115,10 @@ body {
 .text-disponible{
     color: #ffffff;
     font-size: 1.8rem;
+}
+.image-cv:hover{
+    transform: scale(1.07);
+    transition: all 0.3s ease;
 }
 
 .pourcentage{
@@ -594,4 +607,40 @@ body {
     line-height: 1.8;
     font-weight: 400;
     color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+    /* 1. Force l'affichage immédiat des éléments qui attendent le scroll */
+    .apparition, 
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    /* 2. Annule les décalages ou les zooms au survol inadaptés au tactile */
+    .card-f:hover {
+        transform: none !important;
+        border-left-color: rgb(39, 97, 255) !important; /* Garde la couleur initiale */
+        background-color: #000000 !important;
+    }
+
+    .card-e:hover,
+    .card-c:hover,
+    .lieu-ita:hover,
+    .lieu-ya-consulting:hover,
+    .sociale-lien:hover,
+    .bloc-image-conteneur:hover .image-moitie-droite {
+        transform: none !important;
+    }
+    
+    .card-e:hover {
+        border-top: 5px solid #1452ff !important; /* Évite l'épaississement de la bordure */
+        background-color: #000000 !important;
+    }
+
+    /* 3. Optionnel : Désactive l'animation d'introduction du Hero Header sur mobile */
+    .bloc-contenu-texte {
+        animation: none !important;
+    }
 }
