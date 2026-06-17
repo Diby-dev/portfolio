@@ -1,13 +1,15 @@
 const textes = [
-    "Conception d'applications robustes, architecture de bases de données et intégration sécurisée.",
+    "Je développe des applications Web, Desktop, Mobiles.",
     
-    "Développement d'applications web modernes avec PHP, Laravel, JavaScript et Bootstrap.",
+    "Pour moi, il est important que le code soit clair et propre pour une meilleure maintenance.",
     
-    "Création d'interfaces fluides, responsives et centrées sur l'expérience utilisateur.",
+    "Je m'investis à 100% dans mon travail afin de répondre aux exigences du client.",
     
-    "Conception d'API performantes et intégration de solutions métier adaptées aux besoins.",
+    "Je conçois des API performantes et j'intègre des solutions métier adaptées aux besoins.",
     
-    "Passionné par le code propre, les bonnes pratiques et l'amélioration continue."
+    "Le développement d'applications est, avant tout, une passion pour moi.",
+
+    "Disponible pour de nouvelles opportunités, je reste à votre entière disposition. Contactez-moi ou laissez-moi un message !"
 ];
 
 const element = document.getElementById("texte-rotation");

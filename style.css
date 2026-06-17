@@ -610,8 +610,7 @@ body {
 }
 
 @media (max-width: 991.98px) {
-    /* 1. Force l'affichage immédiat des éléments qui attendent le scroll */
-    .apparition, 
+    /* 1. Force l'affichage immédiat pour .reveal (les animations montantes .apparition restent actives) */
     .reveal {
         opacity: 1 !important;
         transform: none !important;
