@@ -262,3 +262,38 @@ form.addEventListener('submit', function(e) {
         responseMessage.className = "mt-3 text-danger fw-bold";
     });
 });
+
+
+
+
+
+const textToType = "Mes applications sont toujours à la hauteur des attentes.";
+    const typewriterElement = document.getElementById("typewriter");
+    const cursorElement = document.querySelector(".cursor");
+    let charIndex = 0;
+
+    function typeSingleText() {
+        if (charIndex < textToType.length) {
+            typewriterElement.textContent += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeSingleText, 50);
+        } else {
+            setTimeout(() => {
+                if (cursorElement) cursorElement.style.display = 'none';
+            }, 1500);
+        }
+    }
+
+    if (typewriterElement) {
+        // Renommé en typewriterObserver pour éviter les conflits
+        const typewriterObserver = new IntersectionObserver((entries, observerInstance) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeSingleText();
+                    observerInstance.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        typewriterObserver.observe(typewriterElement);
+    }
