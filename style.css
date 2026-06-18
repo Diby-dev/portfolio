@@ -111,7 +111,15 @@ body {
     background-position: relative;
     min-height: 100px; 
 }
-
+.section-disponible4{
+    background: linear-gradient(rgba(60, 66, 94, 0.219), rgba(20, 34, 97, 0.137)), url("assets/images/styles/s.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: relative;
+    min-height: 100px; 
+}
 .text-disponible{
     color: #ffffff;
     font-size: 1.8rem;
@@ -179,6 +187,15 @@ body {
 
 .section-formation{
     background: linear-gradient(rgba(255, 255, 255, 0.63), rgba(255, 255, 255, 0.568)), url("assets/images/styles/18.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: relative;
+    min-height: 450px; 
+}
+
+.section-freelance{
+    background: linear-gradient(rgba(255, 255, 255, 0.63), rgba(255, 255, 255, 0.568)), url("assets/images/styles/52.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

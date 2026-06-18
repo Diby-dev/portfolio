@@ -106,62 +106,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-const textesDisponible = [
-    "Je suis Dan Diby, un développeur Full Stack passionné par la création",
-    "Je développe des applications web modernes",
-    "Je maîtrise HTML, CSS, JavaScript et PHP",
-    "Je conçois des interfaces responsives",
-    "Je développe des solutions Full Stack performantes",
-    "Je suis disponible pour vos projets"
-];
-
-const texteDisponible = document.getElementById("texte-slider");
-const pointsDisponible = document.querySelectorAll(".point");
-
-let indexDisponible = 0;
-
-function changerTexteDisponible() {
-
-    texteDisponible.classList.add("sortie");
-
-    setTimeout(() => {
-
-        indexDisponible++;
-
-        if (indexDisponible >= textesDisponible.length) {
-            indexDisponible = 0;
-        }
-
-        texteDisponible.textContent = textesDisponible[indexDisponible];
-
-        pointsDisponible.forEach(point => {
-            point.classList.remove("active");
-        });
-
-        pointsDisponible[indexDisponible].classList.add("active");
-
-        texteDisponible.classList.remove("sortie");
-        texteDisponible.classList.add("entree");
-
-        setTimeout(() => {
-            texteDisponible.classList.remove("entree");
-        }, 50);
-
-    }, 800);
-}
-
-setInterval(changerTexteDisponible, 5000);
-
-
 const textesDisponibles = [
-    "Je suis Dan Diby, un développeur Full Stack passionné par la création",
-    "Je développe des applications web modernes",
-    "Je maîtrise HTML, CSS, JavaScript et PHP",
-    "Je conçois des interfaces responsives",
-    "Je développe des solutions Full Stack performantes",
-    "Je suis disponible pour vos projets"
+    "Prêt à mettre mes compétences au service de votre entreprise.",
+    "N'hésitez pas à me contacter, ce serait un plaisir.",
+    "Merci.",
+    "Dans mon travail, je m'investis toujours à 100% afin de répondre aux défis techniques les plus exigeants.",
+    "Le dynamisme, le travail en équipe, l'adaptabilité  et l'autonomie sont mes plus grandes qualités.",
+    "Construisons ensemble les applications de demain."
 ];
 
 const texteEl = document.getElementById("texte-slider");
